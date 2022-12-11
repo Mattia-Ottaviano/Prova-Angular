@@ -8,7 +8,7 @@ import { Room } from '../models/room.model';
   styleUrls: ['./listaprenotazioni.component.css']
 })
 export class ListaprenotazioniComponent implements OnInit{
-
+  @Input() room : Room  = undefined!
   @Input() listaPreno: Booking[] = undefined!;
   constructor() {}
 
@@ -17,7 +17,10 @@ export class ListaprenotazioniComponent implements OnInit{
 
   mostraDett(room : Room)
   {
-    console.log(room)
+    this.room.id = room.id;
+    this.room.name = room.name;
+    this.room.num_D_bed = room.num_D_bed
+    this.room.num_S_bed = room.num_S_bed
   }
 
 }

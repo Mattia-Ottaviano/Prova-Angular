@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Booking } from './models/booking.model';
+import { Room } from './models/room.model';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'hotel';
   obsRooms : Observable<Booking[]> = undefined!
   data : Booking[] = undefined! 
+  selectedRoom : Room = new Room();
   constructor(private http : HttpClient)
   { 
 
