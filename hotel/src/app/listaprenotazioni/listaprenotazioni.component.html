@@ -1,0 +1,9 @@
+<div *ngFor = "let b of listaPreno">
+    {{b.from}}
+    {{b.to}}
+    {{b.name}}
+    {{b.surname}}
+    <hr>
+
+    <button (click)="mostraDett(b.room)">Mostra Dettagli Stanza</button>
+</div>
